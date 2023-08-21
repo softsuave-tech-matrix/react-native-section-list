@@ -3,11 +3,11 @@ import type { DynamicObject, sectionedDataType } from './types';
 
 export const modifySectionList = (
   data: DynamicObject[] | null | undefined,
-  jsonKey: string,
+  jsonKey: string | number,
   isDate?: boolean
 ): sectionedDataType[] | null => {
   const dateFormat = 'MMM DD YYYY h:mm:ss A';
-  let keyName: string | null | undefined = null;
+  let keyName: string | number | null | undefined = null;
 
   if (!data) return null;
 
@@ -18,7 +18,9 @@ export const modifySectionList = (
   const filteredList = isValue
     ? data?.filter((item) =>
         keysArray.some(
-          (keyVal) => item[keyVal]?.toLowerCase() === jsonKey?.toLowerCase()
+          (keyVal) =>
+            item[keyVal]?.toString()?.toLowerCase() ===
+            jsonKey?.toString()?.toLowerCase()
         )
       )
     : data;
@@ -27,13 +29,18 @@ export const modifySectionList = (
     (result: sectionedDataType[], obj: DynamicObject) => {
       keyName = isValue
         ? Object.keys(obj).find(
-            (key) => obj[key]?.toLowerCase() === jsonKey?.toLowerCase()
+            (key) =>
+              obj[key]?.toString()?.toLowerCase() ===
+              jsonKey?.toString()?.toLowerCase()
           )
         : jsonKey;
 
       const existedData = result?.find((item) => {
         if (keyName)
-          return item.keyName?.toLowerCase() === obj[keyName]?.toLowerCase();
+          return (
+            item.keyName?.toString()?.toLowerCase() ===
+            obj[keyName]?.toString()?.toLowerCase()
+          );
         return false;
       });
 
@@ -70,7 +77,10 @@ export const modifySectionList = (
     sortDateData(groupedData);
   } else if (keyName) {
     groupedData.sort((a, b) =>
-      a?.keyName?.toLowerCase().localeCompare(b?.keyName?.toLowerCase())
+      a?.keyName
+        ?.toString()
+        ?.toLowerCase()
+        .localeCompare(b?.keyName?.toString()?.toLowerCase())
     );
   }
 

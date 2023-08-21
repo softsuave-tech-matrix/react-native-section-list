@@ -13,7 +13,7 @@ import type { DynamicObject, sectionedDataType } from './types';
 
 interface Props
   extends Omit<FlatListProps<sectionedDataType>, 'renderItem' | 'data'> {
-  jsonKey: string;
+  jsonKey: string | number;
   isDate?: boolean;
   childContainerStyle?: ViewStyle;
   containerStyle?: ViewStyle;
