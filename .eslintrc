@@ -1,0 +1,40 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "plugins": ["@typescript-eslint", "react", "react-hooks"],
+    "extends": [
+      "@react-native-community",
+      "prettier",
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:react/recommended",
+      "plugin:react-hooks/recommended"
+    ],
+    "rules": {
+      "prettier/prettier":  "error",
+
+      // General TypeScript
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/no-explicit-any": "error",
+
+      // React and JSX
+      "react/jsx-uses-react": "off",
+      "react/react-in-jsx-scope": "off",
+
+      // React Hooks
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+
+      // Other rules
+      "no-console": "warn", 
+      "no-unused-vars": "warn",
+      "no-empty-function": "error"
+    }
+  }
