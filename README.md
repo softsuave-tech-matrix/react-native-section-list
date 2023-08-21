@@ -14,10 +14,6 @@ Download the package with npm or yarn
 npm install react-native-section-list
 ```
 
-```sh
-yarn add react-native-section-list
-```
-
 In order for react-native-section-list to work, you also need to install the moment
 
 ```sh

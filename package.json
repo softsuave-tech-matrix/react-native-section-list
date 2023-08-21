@@ -1,6 +1,6 @@
 {
   "name": "react-native-section-list",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The react-native-section-list package is a library for React Native applications that simplifies the rendering and handling of lists. It provides a customizable component, SectionList, which allows you to display and iterate through a list of items, along with optional heading and item rendering functionalities.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -39,7 +39,10 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "sectionlist",
+    "flatlist",
+    "list"
   ],
   "repository": "https://github.com/softsuave-tech-matrix/react-native-section-list",
   "author": "softsuave-tech-matrix <techmatrix@softsuave.com> (https://github.com/softsuave-tech-matrix/)",
