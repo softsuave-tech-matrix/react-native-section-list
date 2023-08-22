@@ -8,7 +8,7 @@ The react-native-section-list package is a library for React Native applications
 
 ## Installation
 
-Download the package with npm or yarn
+Download the package with npm
 
 ```sh
 npm install react-native-section-list
@@ -63,6 +63,3 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 
 MIT
 
----
-
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
