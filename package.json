@@ -33,8 +33,7 @@
     "prepack": "bob build",
     "release": "release-it",
     "example": "yarn --cwd example",
-    "bootstrap": "yarn example && yarn install",
-    "postinstall": "husky install"
+    "bootstrap": "yarn example && yarn install"
   },
   "keywords": [
     "react-native",
@@ -74,7 +73,6 @@
     "eslint": "^8.4.1",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "husky": "^8.0.3",
     "jest": "^28.1.1",
     "lint-staged": "^14.0.0",
     "moment": "^2.29.4",
@@ -91,7 +89,7 @@
   },
   "peerDependencies": {
     "react": ">= 16.8 || 18.0.0",
-    "react-native":"*"
+    "react-native": "*"
   },
   "engines": {
     "node": ">= 16.0.0"
